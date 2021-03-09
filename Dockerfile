@@ -1,4 +1,4 @@
-FROM python:3
+FROM arm32v7/python:3
 
 RUN apt-get update && \
 	apt-get -y install nano git
@@ -12,7 +12,7 @@ RUN mkdir -p /app
 ADD run.sh /app/
 RUN chmod +x /app/run.sh
 
-RUN cd /app/ && git clone https://github.com/arehbein-git/ppTag.git pptag
+RUN cd /app/ && git clone https://github.com/ricardopaiva/ppTag.git pptag
 
 VOLUME /Photos
 
